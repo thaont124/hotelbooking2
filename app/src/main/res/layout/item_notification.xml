@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto" 
+    app:cardCornerRadius="6dp"><!--để bo góc-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_read"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/ic_read"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/name_notification"
+            android:layout_width="283dp"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:text="hello world"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
