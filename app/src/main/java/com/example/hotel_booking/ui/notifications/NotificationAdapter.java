@@ -37,6 +37,7 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
         }
         holder.imgNotification.setImageResource(notification.getImgId());
         holder.txtContent.setText(notification.getContent());
+        holder.txtDate.setText(String.format(notification.getDate()));
     }
 
     @Override
@@ -51,12 +52,14 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
         private ImageView imgNotification;
         private TextView txtContent;
+        private TextView txtDate;
 
         public NotificationViewHolder(@NonNull View itemView) {
             super(itemView);
 
             this.imgNotification = itemView.findViewById(R.id.img_read);
             this.txtContent = itemView.findViewById(R.id.name_notification);
+            this.txtDate = itemView.findViewById(R.id.date_notification);
         }
     }
 }

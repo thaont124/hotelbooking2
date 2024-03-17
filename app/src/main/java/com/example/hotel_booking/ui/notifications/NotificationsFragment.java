@@ -16,6 +16,7 @@ import com.example.hotel_booking.R;
 import com.example.hotel_booking.databinding.FragmentHistoryBinding;
 import com.example.hotel_booking.model.Notification;
 
+import org.threeten.bp.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,9 +43,18 @@ public class NotificationsFragment extends Fragment {
         List<Notification> list = new ArrayList<>();
 
         // Adding Notification objects with specific values
-        list.add(new Notification(R.drawable.ic_notread, "Notification Content 1", 1));
-        list.add(new Notification(R.drawable.ic_read, "Notification Content 2", 2));
-        list.add(new Notification(R.drawable.ic_notread, "Notification Content 3", 1));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 1", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_read, "Notification Content 2", 2, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 3", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 1", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_read, "Notification Content 2", 2, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 3", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 1", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_read, "Notification Content 2", 2, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 3", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 1", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_read, "Notification Content 2", 2, LocalDateTime.parse("2015-02-20T06:30:00")));
+        list.add(new Notification(R.drawable.ic_notread, "Notification Content 3", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
         // Add more as needed
 
         return list;

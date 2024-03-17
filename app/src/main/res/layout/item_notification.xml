@@ -17,15 +17,33 @@
             android:src="@drawable/ic_read"
             android:scaleType="fitXY"/>
 
-        <TextView
-            android:id="@+id/name_notification"
-            android:layout_width="283dp"
-            android:layout_height="120dp"
-            android:gravity="top"
-            android:text="hello world"
-            android:padding="5dp"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginStart="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_notification"
+                android:layout_width="283dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="10dp"
+                android:gravity="top"
+                android:padding="5dp"
+                android:text="hello world"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/date_notification"
+                android:layout_width="283dp"
+                android:layout_height="30dp"
+                android:gravity="top"
+                android:text="hello"
+                android:padding="5dp"
+                android:textColor="@color/silver"
+                android:textSize="16sp"
+                android:layout_marginStart="10dp"/>
+        </LinearLayout>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>
