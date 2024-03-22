@@ -1,8 +1,10 @@
-package com.example.hotel_booking.model;
+package com.example.hotel_booking.entity;
 
 import org.threeten.bp.LocalDateTime;
 
-public class Notification {
+import java.io.Serializable;
+
+public class Notification implements Serializable {
     private int imgId;
     private String content;
 

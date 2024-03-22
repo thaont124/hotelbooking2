@@ -6,6 +6,7 @@
     app:cardCornerRadius="6dp"><!--để bo góc-->
 
     <LinearLayout
+        android:id="@+id/item_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
