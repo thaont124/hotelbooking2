@@ -1,15 +1,22 @@
-package com.example.hotel_booking.model;
+package com.example.hotel_booking.entity;
 
-public class Notification {
+import org.threeten.bp.LocalDateTime;
+
+import java.io.Serializable;
+
+public class Notification implements Serializable {
     private int imgId;
     private String content;
 
     private int type;
 
-    public Notification(int imgId, String content, int type) {
+    private LocalDateTime date;
+
+    public Notification(int imgId, String content, int type, LocalDateTime date) {
         this.imgId = imgId;
         this.content = content;
         this.type = type;
+        this.date = date;
     }
 
     public int getImgId() {
@@ -34,5 +41,13 @@ public class Notification {
 
     public void setType(int type) {
         this.type = type;
+    }
+
+    public String getDate() {
+        return String.format(String.valueOf(date));
+    }
+
+    public void setDate(LocalDateTime date) {
+        this.date = date;
     }
 }

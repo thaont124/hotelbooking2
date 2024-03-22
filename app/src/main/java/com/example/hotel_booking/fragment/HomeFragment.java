@@ -1,4 +1,4 @@
-package com.example.hotel_booking.ui.home;
+package com.example.hotel_booking.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,9 +27,7 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // Lấy TextView từ layout sử dụng Data Binding
-        final TextView textView = binding.textHome;
-        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);//cập nhật giao diện
+
         return root;// Trả về giao diện
     }
 
