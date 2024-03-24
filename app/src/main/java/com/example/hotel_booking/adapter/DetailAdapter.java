@@ -66,14 +66,14 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 UserInforViewHolder userInforViewHolder = (UserInforViewHolder) holder;
                 User customerInfo = billInfo.getUser();
 
-                userInforViewHolder.nameCustomer.setText("Tên khách hàng: " + customerInfo.getFullName());
-                userInforViewHolder.cccd.setText("CCCD/CMND: " + customerInfo.getCccd());
-                userInforViewHolder.email.setText("Email: " + customerInfo.getEmail());
-                userInforViewHolder.phoneNumber.setText("Số điện thoại: " + customerInfo.getPhoneNumber());
-                userInforViewHolder.dateBooking.setText("Thời gian đặt phòng: " + billInfo.getBookingTime().toString());
-                userInforViewHolder.dateCheckin.setText("Thời gian nhận phòng: " + billInfo.getCheckinTime().toString());
-                userInforViewHolder.dateCheckout.setText("Thời gian trả phòng: " + billInfo.getCheckoutTime().toString());
-                userInforViewHolder.payStatus.setText("Trạng thái thanh toán: " + billInfo.getBillCode());
+                userInforViewHolder.nameCustomer.setText(customerInfo.getFullName());
+                userInforViewHolder.cccd.setText(customerInfo.getCccd());
+                userInforViewHolder.email.setText(customerInfo.getEmail());
+                userInforViewHolder.phoneNumber.setText(customerInfo.getPhoneNumber());
+                userInforViewHolder.dateBooking.setText(billInfo.getBookingTime().toString());
+                userInforViewHolder.dateCheckin.setText(billInfo.getCheckinTime().toString());
+                userInforViewHolder.dateCheckout.setText(billInfo.getCheckoutTime().toString());
+                userInforViewHolder.payStatus.setText(billInfo.getBillCode());
                 break;
             case TYPE_ROOM_INFO:
                 billInfo = (Bill) mItems.get(2);

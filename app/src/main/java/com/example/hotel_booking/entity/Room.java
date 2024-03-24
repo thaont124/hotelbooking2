@@ -23,12 +23,15 @@ public class Room {
 
     private Branch branch;
 
-    public Room(Long idRoom, String roomNumber, Float pricePerHour, Float pricePerDay, TypeRoom typeRoom) {
+    private int imgId;
+
+    public Room(Long idRoom, String roomNumber, Float pricePerHour, Float pricePerDay, TypeRoom typeRoom, int imgId) {
         this.idRoom = idRoom;
         this.roomNumber = roomNumber;
         this.pricePerHour = pricePerHour;
         this.pricePerDay = pricePerDay;
         this.typeRoom = typeRoom;
+        this.imgId = imgId;
     }
 
     public Long getIdRoom() {
@@ -81,5 +84,13 @@ public class Room {
 
     public void setBranch(Branch branch) {
         this.branch = branch;
+    }
+
+    public int getImgId() {
+        return imgId;
+    }
+
+    public void setImgId(int imgId) {
+        this.imgId = imgId;
     }
 }

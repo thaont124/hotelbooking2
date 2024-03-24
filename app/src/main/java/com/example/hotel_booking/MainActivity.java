@@ -1,6 +1,9 @@
 package com.example.hotel_booking;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
@@ -26,6 +29,19 @@ public class MainActivity extends AppCompatActivity {
         // Toolbar setup
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); // Sử dụng setSupportActionBar để thiết lập ActionBar
+
+        ImageView settingsIcon = findViewById(R.id.settings_icon);
+
+        settingsIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Xử lý các hành động khi biểu tượng cài đặt được nhấp
+                // Ví dụ: mở màn hình cài đặt
+                Intent intent = new Intent(MainActivity.this, SettingNotificationActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         // Navigation setup
         BottomNavigationView navView = findViewById(R.id.nav_view);

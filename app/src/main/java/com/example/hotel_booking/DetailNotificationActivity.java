@@ -54,7 +54,7 @@ public class DetailNotificationActivity extends AppCompatActivity {
         TypeRoom typeRoom1 = new TypeRoom(1L, "Standard");
         TypeRoom typeRoom2 = new TypeRoom(2L, "Deluxe");
 
-        Room room1 = new Room(1L, "101", 50.0f, 100.0f, typeRoom1);
+        Room room1 = new Room(1L, "101", 50.0f, 100.0f, typeRoom1, R.drawable.img_hotel_ex);
         room1.setBranch(branch1);
 
         User user1 = new User(1L, "exampleuser", "password", "1234728393", "John", "Doe", "Smith", "123456789", "john@example.com");

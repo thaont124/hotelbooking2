@@ -9,6 +9,20 @@ public class Hotel {
     private Long idHotel;
     private String hotelName;
 
+    private int imgId;
+
+    private float rating;
+
+    public Hotel() {
+    }
+
+    public Hotel(Long idHotel, String hotelName, int imgId, float rating) {
+        this.idHotel = idHotel;
+        this.hotelName = hotelName;
+        this.imgId = imgId;
+        this.rating = rating;
+    }
+
     public Long getIdHotel() {
         return idHotel;
     }
@@ -23,5 +37,21 @@ public class Hotel {
 
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
+    }
+
+    public int getImgId() {
+        return imgId;
+    }
+
+    public void setImgId(int imgId) {
+        this.imgId = imgId;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 }
