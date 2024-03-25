@@ -80,20 +80,20 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
                 Room roomInfo = billInfo.getRoom();
                 RoomInforViewHolder roomInfoViewHolder = (RoomInforViewHolder) holder;
 
-                roomInfoViewHolder.roomNumber.setText("Số phòng: " + roomInfo.getRoomNumber());
-                roomInfoViewHolder.roomType.setText("Loại phòng: " +roomInfo.getTypeRoom());
-                roomInfoViewHolder.hotel.setText("Tên khách sạn: " +roomInfo.getBranch().getHotel().getHotelName());
-                roomInfoViewHolder.costPerDay.setText("Giá theo ngày: " +roomInfo.getPricePerDay().toString());
-                roomInfoViewHolder.costPerHour.setText("Giá theo ngày: " + roomInfo.getPricePerHour().toString());
+                roomInfoViewHolder.roomNumber.setText(roomInfo.getRoomNumber());
+                roomInfoViewHolder.roomType.setText(roomInfo.getTypeRoom());
+                roomInfoViewHolder.hotel.setText(roomInfo.getBranch().getHotel().getHotelName());
+                roomInfoViewHolder.costPerDay.setText(roomInfo.getPricePerDay().toString());
+                roomInfoViewHolder.costPerHour.setText(roomInfo.getPricePerHour().toString());
                 break;
             case TYPE_BILL_INFO:
                 billInfo = (Bill) mItems.get(2);
                 BillInforViewHolder billInfoViewHolder = (BillInforViewHolder) holder;
 
-                billInfoViewHolder.billCode.setText("Mã hóa đơn: " + billInfo.getBillCode());
-                billInfoViewHolder.totalPrice.setText("Tổng giá" + billInfo.getTotalPrice().toString());
-                billInfoViewHolder.vat.setText("Thuế VAT (10%): " + billInfo.getVAT().toString());
-                billInfoViewHolder.gross.setText("Thành tiền: " + billInfo.getGross().toString());
+                billInfoViewHolder.billCode.setText(billInfo.getBillCode());
+                billInfoViewHolder.totalPrice.setText(billInfo.getTotalPrice().toString());
+                billInfoViewHolder.vat.setText(billInfo.getVAT().toString());
+                billInfoViewHolder.gross.setText(billInfo.getGross().toString());
         }
 
     }

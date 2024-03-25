@@ -44,7 +44,7 @@ public class NotificationsFragment extends Fragment {
         List<Notification> list = new ArrayList<>();
 
         // Adding Notification objects with specific values
-        list.add(new Notification(R.drawable.ic_notread, "Notification Content 1", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
+            list.add(new Notification(R.drawable.ic_read, "BILL001 - Bạn đã đặt thành công phòng 101 tại Midas Hotel", 1, LocalDateTime.parse("2015-02-20T06:30:00")));
         list.add(new Notification(R.drawable.ic_read, "Notification Content 2", 2, LocalDateTime.parse("2016-02-20T06:30:00")));
         list.add(new Notification(R.drawable.ic_notread, "Notification Content 3", 1, LocalDateTime.parse("2017-02-20T06:30:00")));
         list.add(new Notification(R.drawable.ic_notread, "Notification Content 11", 1, LocalDateTime.parse("2018-02-20T06:30:00")));

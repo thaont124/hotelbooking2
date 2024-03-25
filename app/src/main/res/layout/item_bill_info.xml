@@ -19,37 +19,91 @@
         android:textStyle="bold"
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"/>
-    <TextView
-        android:id="@+id/billCodeTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/billCodeTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Mã đơn đặt: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/billCodeTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="CH0000001204"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/totalPriceTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Tổng tiền: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/totalPriceTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="2,000,000đ
+"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/payStatusTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thuế VAT: 10%: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/vatTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="200,000"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/grossTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thành tiền: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/grossTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="2,200,000"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/totalPriceTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-    <TextView
-        android:id="@+id/vatTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-    <TextView
-        android:id="@+id/grossTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
+
 </LinearLayout>

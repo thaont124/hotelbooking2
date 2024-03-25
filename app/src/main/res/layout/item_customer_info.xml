@@ -19,76 +19,175 @@
         android:layout_gravity="center"
         android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:id="@+id/customerNameTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="Tên khách hàng: Nguyễn Văn A"
-        android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/customerNameTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Tên khách hàng: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/customerNameTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Nguyễn Văn A"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/CCCDTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="CCCD/CMND: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/cccdTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="1234567890"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/emailTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Email: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="0382389433"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/phoneNumberTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Số điện thoại: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/phoneNumberTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="0382389433"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/dateBookingTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thời gian đặt phòng: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/dateBookingTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="CCCD/Hộ chiếu: 1234567890"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/dateCheckinTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thời gian nhận phòng: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/dateCheckinTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="CCCD/Hộ chiếu: 1234567890"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/dateCheckoutTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Thười gian trả phòng: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/dateCheckoutTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="CCCD/Hộ chiếu: 1234567890"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/payStatusTitle"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Trạng thái thanh toán: "
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/payStatusTextView"
+            android:layout_width="345dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="CCCD/Hộ chiếu: 1234567890"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/cccdTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
 
-    <TextView
-        android:id="@+id/emailTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/phoneNumberTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/dateBookingTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/dateCheckinTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/dateCheckoutTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/payStatusTextView"
-        android:layout_width="345dp"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="CCCD/Hộ chiếu: 1234567890"
-        android:textColor="@android:color/black"
-        android:textSize="16sp" />
 
 </LinearLayout>
 

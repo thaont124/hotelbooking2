@@ -10,25 +10,20 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.appcompat.widget.Toolbar; // Import thêm
+import androidx.appcompat.widget.Toolbar;
 
-import com.example.hotel_booking.databinding.ActivityMainBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ActivityMainBinding binding;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        setContentView(R.layout.activity_main);
 
         // Toolbar setup
         Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar); // Sử dụng setSupportActionBar để thiết lập ActionBar
+        setSupportActionBar(toolbar);
 
         ImageView settingsIcon = findViewById(R.id.settings_icon);
 
@@ -42,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         // Navigation setup
         BottomNavigationView navView = findViewById(R.id.nav_view);
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
@@ -50,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
+        NavigationUI.setupWithNavController(navView, navController);
     }
-
 }
