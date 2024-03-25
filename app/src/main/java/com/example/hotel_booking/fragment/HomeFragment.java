@@ -49,7 +49,7 @@ public class HomeFragment extends Fragment {
         List<Hotel> list = new ArrayList<>();
 
         // Adding Notification objects with specific values
-        list.add(new Hotel(1L, "Hotel A", R.drawable.hotel_a, 4.5f));
+        list.add(new Hotel(1L, "Midas Hotel", R.drawable.hotel_a, 4.5f));
         list.add(new Hotel(1L, "Hotel B", R.drawable.img_hotel_ex, 4.5f));
         list.add(new Hotel(1L, "Hotel C", R.drawable.hotel_b, 4f));
         list.add(new Hotel(1L, "Hotel D", R.drawable.hotel_a, 4.5f));
