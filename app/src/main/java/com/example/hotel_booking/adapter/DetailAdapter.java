@@ -82,7 +82,7 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
                 roomInfoViewHolder.roomNumber.setText("Số phòng: " + roomInfo.getRoomNumber());
                 roomInfoViewHolder.roomType.setText("Loại phòng: " +roomInfo.getTypeRoom());
-                roomInfoViewHolder.hotel.setText("Tên khách sạn: " +roomInfo.getBranch().getHotel().getHotelName());
+                roomInfoViewHolder.hotel.setText("Tên khách sạn: " +roomInfo.getBranch().getHotel().getName());
                 roomInfoViewHolder.costPerDay.setText("Giá theo ngày: " +roomInfo.getPricePerDay().toString());
                 roomInfoViewHolder.costPerHour.setText("Giá theo ngày: " + roomInfo.getPricePerHour().toString());
                 break;

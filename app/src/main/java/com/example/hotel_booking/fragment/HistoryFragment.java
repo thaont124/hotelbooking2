@@ -1,15 +1,20 @@
 package com.example.hotel_booking.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.example.hotel_booking.HoanTatActivity;
+import com.example.hotel_booking.List_hotel;
+import com.example.hotel_booking.R;
 import com.example.hotel_booking.databinding.FragmentHistoryBinding;
 
 public class HistoryFragment extends Fragment {
@@ -24,8 +29,17 @@ public class HistoryFragment extends Fragment {
         binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textHistory;
-        historyViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+
+
+        Button button = root.findViewById(R.id.bt8);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), HoanTatActivity.class);
+                startActivity(intent);
+            }
+        });
+
         return root;
     }
 

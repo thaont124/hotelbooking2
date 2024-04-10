@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".FilterActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tw1"
+        android:text="TIỆN NGHI"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/filter"
+        />
+    <CheckBox
+        android:id="@+id/ck1"
+        android:text="Bể bơi"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tw1"
+        />
+    <CheckBox
+        android:id="@+id/ck2"
+        android:text="Đón trả khách"
+        android:textSize="20dp"
+        android:layout_alignLeft="@id/ck1"
+        android:layout_below="@id/ck1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck3"
+        android:text="Công viên nước"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/ck1"
+        android:layout_alignLeft="@id/ck4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck4"
+        android:text="TRung tâm fitness"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/ck2"
+        android:layout_toRightOf="@id/ck2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tw2"
+        android:text="CƠ SỞ VẬT CHẤT"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:background="@drawable/filter"
+        android:layout_below="@id/ck2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck5"
+        android:text="Bể bơi"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tw2"
+        />
+    <CheckBox
+        android:id="@+id/ck6"
+        android:text="Đón trả khách"
+        android:textSize="20dp"
+        android:layout_alignLeft="@id/ck5"
+        android:layout_below="@id/ck5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck7"
+        android:text="Công viên nước"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/ck5"
+        android:layout_alignLeft="@id/ck8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck8"
+        android:text="TRung tâm fitness"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/ck6"
+        android:layout_toRightOf="@id/ck6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/tw3"
+        android:text="DỊCH VỤ"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:background="@drawable/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ck6"
+        />
+    <CheckBox
+        android:id="@+id/ck9"
+        android:text="Bể bơi"
+        android:textSize="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tw3"
+        />
+    <CheckBox
+        android:id="@+id/ck10"
+        android:text="Đón trả khách"
+        android:textSize="20dp"
+        android:layout_alignLeft="@id/ck9"
+        android:layout_below="@id/ck9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck11"
+        android:text="Công viên nước"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/ck9"
+        android:layout_alignLeft="@id/ck12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <CheckBox
+        android:id="@+id/ck12"
+        android:text="TRung tâm fitness"
+        android:textSize="20dp"
+        android:layout_alignTop="@id/ck10"
+        android:layout_toRightOf="@id/ck10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <Button
+        android:id="@+id/btfilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="247dp"
+        android:text="Áp dụng" />
+</RelativeLayout>

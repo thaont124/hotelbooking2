@@ -47,7 +47,7 @@ public class DetailNotificationActivity extends AppCompatActivity {
     private Bill getBill(){
         Hotel hotel1 = new Hotel();
         hotel1.setIdHotel(1L);
-        hotel1.setHotelName("Example Hotel");
+        hotel1.setName("Example Hotel");
 
         Branch branch1 = new Branch(1L, "Branch 1", "123 Example St", hotel1);
 

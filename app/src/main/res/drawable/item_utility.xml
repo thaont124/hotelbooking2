@@ -1,0 +1,8 @@
+<!-- res/drawable/gray_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#EEE9EF" /> <!-- Màu xám nhạt -->
+    <corners android:radius="2dp" /> <!-- Bo tròn góc -->
+    <stroke
+        android:color="#A09DA1"  />
+</shape>

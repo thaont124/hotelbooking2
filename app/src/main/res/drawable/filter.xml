@@ -1,0 +1,9 @@
+<!-- res/drawable/custom_border_item.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@android:color/transparent" />
+    <corners android:radius="8dp" />
+    <stroke
+        android:width="2dp"
+        android:color="#A272F6" /> <!-- Đặt màu viền yêu thích ở đây, ví dụ #FF0000 là màu đỏ -->
+</shape>

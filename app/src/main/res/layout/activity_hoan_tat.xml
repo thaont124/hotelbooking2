@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HoanTatActivity">
+
+
+    <TextView
+        android:id="@+id/title8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="Hoàn tất" />
+
+    <TextView
+        android:id="@+id/type3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:layout_below="@id/title8"
+        android:layout_marginTop="30dp"
+        android:text="Phòng " />
+
+    <ImageView
+        android:id="@+id/im3"
+        android:layout_width="332dp"
+        android:layout_height="229dp"
+        android:layout_below="@id/type3"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/img_1" />
+
+    <TextView
+        android:id="@+id/tt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@id/im3"
+        android:text="1 giường đôi lớn \n Không hút thuốc \n Wifi miễn phí \n Bãi đỗ xe \n $ 200.000" />
+
+    <Button
+        android:id="@+id/bt13"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:textSize="20dp"
+        android:layout_below="@id/tt4"
+        android:layout_marginTop="20dp"
+        android:text="Chi tiết" />
+
+    <Button
+        android:id="@+id/bt14"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/im3"
+        android:layout_marginLeft="230dp"
+        android:layout_marginTop="141dp"
+        android:text="Đánh giá"
+        android:textSize="20dp" />
+
+</RelativeLayout>

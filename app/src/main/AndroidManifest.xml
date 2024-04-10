@@ -13,10 +13,37 @@
         android:theme="@style/Theme.Hotelbooking"
         tools:targetApi="31">
         <activity
+            android:name=".CompareActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HoanTatActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingNotificationActivity"
             android:exported="false" />
         <activity
             android:name=".DetailNotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ListCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CreateCommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CommentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DetialOfServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FilterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".List_hotel"
+            android:exported="false" />
+        <activity
+            android:name=".DetailHotelActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
