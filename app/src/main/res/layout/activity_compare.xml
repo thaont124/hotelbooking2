@@ -60,7 +60,7 @@
             </LinearLayout>
         </ScrollView>
         <view
-            android:id="@+id/view1"
+            android:id="@+id/view"
             class="androidx.appcompat.widget.ActionMenuView"
             android:layout_width="match_parent"
             android:layout_height="10dp"

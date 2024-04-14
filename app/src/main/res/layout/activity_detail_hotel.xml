@@ -67,7 +67,7 @@
                         android:layout_height="match_parent">
 
                         <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/imageView10"
+                            android:id="@+id/imgHotel"
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
                             android:scaleType="fitXY"
@@ -93,7 +93,7 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView2"
+                                android:id="@+id/nameHotel"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
                                 android:layout_weight="0.5"
@@ -115,7 +115,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="2dp"
-                                    android:rating="5"
+                                    android:rating="3.5"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toBottomOf="@+id/textView42" />
                             </LinearLayout>
@@ -541,7 +541,7 @@
                         android:paddingRight="5dp">
 
                         <TextView
-                            android:id="@+id/textView18"
+                            android:id="@+id/titleMap"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -594,25 +594,19 @@
                             android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/textView20"
+                                android:id="@+id/feedbackLocation"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/cc_montserrat_bold"
                                 android:text="7,6 Rất tốt"
                                 android:textSize="20sp" />
 
-                            <TextView
-                                android:id="@+id/textView22"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Điểm đánh giá vị trí"
-                                android:textColor="#ccc"
-                                android:textSize="16sp" />
 
                             <TextView
-                                android:id="@+id/textView21"
+                                android:id="@+id/location"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif"
                                 android:text="751 Đ.Lê Hồng Phong, Quận 10, Hồ Chí Minh,Việt Nam 700000"
                                 android:textColor="#737272"
                                 android:textSize="16sp" />

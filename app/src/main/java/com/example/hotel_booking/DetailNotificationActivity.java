@@ -1,37 +1,45 @@
 package com.example.hotel_booking;
 
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.os.Bundle;
-
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.hotel_booking.adapter.DetailAdapter;
 import com.example.hotel_booking.entity.Bill;
-import com.example.hotel_booking.entity.Branch;
-import com.example.hotel_booking.entity.Hotel;
+import com.example.hotel_booking.entity.Notification;
 import com.example.hotel_booking.entity.Room;
-import com.example.hotel_booking.entity.TypeRoom;
 import com.example.hotel_booking.entity.User;
 
-import org.threeten.bp.LocalDateTime;
-import org.threeten.bp.Month;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class DetailNotificationActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private DetailAdapter detailAdapter;
+    private RequestQueue mRequestQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail_notification);
 
-//        Bundle bundle = getIntent().getExtras();
-//        if (bundle == null) {
-//            return;
-//        }
-//        Notification notification = (Notification) bundle.get("notification");
+        Bundle bundle = getIntent().getExtras();
+        if (bundle == null) {
+            return;
+        }
+        Notification notification = (Notification) bundle.get("notification");
 
 
         recyclerView = findViewById(R.id.detaiNotificationRclView);
@@ -40,30 +48,73 @@ public class DetailNotificationActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
 
-        detailAdapter.setBillData(getBill());
-        recyclerView.setAdapter(detailAdapter);
+
+        getBill(new BillCallback<Bill>() {
+            @Override
+            public void onSuccess(Bill bill) {
+                detailAdapter.setBillData(bill);
+                recyclerView.setAdapter(detailAdapter);
+            }
+        }, String.valueOf(notification.getIdNotification()));
+
+
     }
 
-    private Bill getBill(){
-        Hotel hotel1 = new Hotel();
-        hotel1.setIdHotel(1L);
-        hotel1.setName("Example Hotel");
+    private void getBill(final BillCallback<Bill> callback, String idNotification) {
 
-        Branch branch1 = new Branch(1L, "Branch 1", "123 Example St", hotel1);
+        mRequestQueue = Volley.newRequestQueue(getApplicationContext());
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, "https://protective-toes-production.up.railway.app/apiv1/notification/detail/" + idNotification, null, new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        try {
+                            String billCode = response.getString("billCode");
+                            Float totalPrice = (float) response.getDouble("totalPrice");
+                            int discount = response.getInt("discount");
+                            int vat = response.getInt("vat");
+                            int gross = response.getInt("gross");
 
-        TypeRoom typeRoom1 = new TypeRoom(1L, "Standard");
-        TypeRoom typeRoom2 = new TypeRoom(2L, "Deluxe");
 
-        Room room1 = new Room(1L, "101", 50.0f, 100.0f, typeRoom1);
-        room1.setBranch(branch1);
+                            JSONArray roomsJson = response.getJSONArray("room");
+                            JSONObject roomJson = (JSONObject) roomsJson.get(0);
 
-        User user1 = new User(1L, "exampleuser", "password", "1234728393", "John", "Doe", "Smith", "123456789", "john@example.com");
+                            JSONObject userJson = response.getJSONObject("customer");
+                            User user = new User();
+                            user.setFullName(userJson.getString("name"));
+                            user.setCccd(userJson.getString("cccd"));
+                            user.setEmail(userJson.getString("email"));
 
-        LocalDateTime checkinTime = LocalDateTime.of(2024, Month.MARCH, 19, 14, 0);
-        LocalDateTime checkoutTime = LocalDateTime.of(2024, Month.MARCH, 21, 12, 0);
-        Bill bill1 = new Bill(1L, "BILL001", room1, user1, checkinTime, checkoutTime, 250.0f);
-        bill1.setBookingTime(LocalDateTime.of(2024, Month.FEBRUARY, 19, 14, 0));
+                            Room room = new Room();
+                            room.setRoomNumber(roomJson.getString("numberRoom"));
+                            room.setPricePerDay((float) roomJson.getDouble("pricePerDay"));
+                            room.setTypeRoom(roomJson.getString("typeRoom"));
+                            room.setHotelName(roomJson.getString("hotelName"));
 
-        return bill1;
+                            user.setPhoneNumber(userJson.getString("phoneNumber"));
+                            String dateBooking = userJson.getString("dateBooking");
+                            String dateCheckin = userJson.getString("dateCheckin");
+                            String dateCheckout = userJson.getString("dateCheckout");
+                            String status = userJson.getString("statusPayment");
+                            Bill bill = new Bill(1L, billCode, room, user, dateBooking, dateCheckin, dateCheckout, totalPrice);
+                            callback.onSuccess(bill);
+
+                        } catch (JSONException e) {
+                            throw new RuntimeException(e);
+                        }
+
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_LONG).show();
+
+            }
+        });
+        mRequestQueue.add(jsonObjectRequest);
+    }
+
+    interface BillCallback<T> {
+
+        void onSuccess(T a);
     }
 }

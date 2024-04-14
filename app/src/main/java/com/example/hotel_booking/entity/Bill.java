@@ -17,26 +17,25 @@ public class Bill {
     @PrimaryKey
     private Long idBill;
     private String billCode;
-    @ColumnInfo(name = "idRoom")
     private Room room;
-    @ColumnInfo(name = "User")
     private User user;
 
-    private LocalDateTime bookingTime;
-    private LocalDateTime checkinTime;
+    private String bookingTime;
+    private String checkinTime;
 
-    private LocalDateTime checkoutTime;
+    private String checkoutTime;
 
     private Float totalPrice;
 
     private String statusPayment;
 
 
-    public Bill(Long idBill, String billCode, Room room, User user, LocalDateTime checkinTime, LocalDateTime checkoutTime, Float totalPrice) {
+    public Bill(Long idBill, String billCode, Room room, User user, String bookingTime, String checkinTime, String checkoutTime, Float totalPrice) {
         this.idBill = idBill;
         this.billCode = billCode;
         this.room = room;
         this.user = user;
+        this.bookingTime = bookingTime;
         this.checkinTime = checkinTime;
         this.checkoutTime = checkoutTime;
         this.totalPrice = totalPrice;
@@ -58,11 +57,11 @@ public class Bill {
         this.billCode = billCode;
     }
 
-    public LocalDateTime getBookingTime() {
+    public String getBookingTime() {
         return bookingTime;
     }
 
-    public void setBookingTime(LocalDateTime bookingTime) {
+    public void setBookingTime(String bookingTime) {
         this.bookingTime = bookingTime;
     }
 
@@ -82,19 +81,19 @@ public class Bill {
         this.user = user;
     }
 
-    public LocalDateTime getCheckinTime() {
+    public String getCheckinTime() {
         return checkinTime;
     }
 
-    public void setCheckinTime(LocalDateTime checkinTime) {
+    public void setCheckinTime(String checkinTime) {
         this.checkinTime = checkinTime;
     }
 
-    public LocalDateTime getCheckoutTime() {
+    public String getCheckoutTime() {
         return checkoutTime;
     }
 
-    public void setCheckoutTime(LocalDateTime checkoutTime) {
+    public void setCheckoutTime(String checkoutTime) {
         this.checkoutTime = checkoutTime;
     }
 

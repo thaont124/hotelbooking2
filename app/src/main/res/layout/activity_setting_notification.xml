@@ -62,19 +62,55 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/alarmCheckin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:paddingStart="30dp"
         android:paddingEnd="20dp"
         android:paddingBottom="20dp">
+
         <TextView
             android:layout_width="200dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:shadowColor="#80000000"
             android:text="Báo trước giờ check in"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:shadowColor="#80000000"/>
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="67dp"
+                android:layout_marginEnd="46dp"
+                android:background="@drawable/edittext_underline"
+                android:focusable="true"
+                android:inputType="numberDecimal"
+                android:minWidth="48dp"
+                android:hint="?"
+                android:text="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="119dp"
+                android:layout_marginEnd="2dp"
+                android:shadowColor="#80000000"
+                android:text="phút"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </RelativeLayout>
+
 
     </LinearLayout>
     <LinearLayout
@@ -82,23 +118,7 @@
         android:layout_height="wrap_content"
         android:paddingStart="30dp"
         android:paddingEnd="20dp"
-        android:paddingBottom="20dp">
-        <TextView
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:text="Thông báo thay đổi phòng"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:shadowColor="#80000000"/>
-
-        <Switch
-            android:id="@+id/roomChangeSwitch"
-            android:layout_width="178dp"
-            android:layout_height="52dp"
-            android:layout_weight="1" />
-
-    </LinearLayout>
+        android:paddingBottom="20dp"/>
 
     <View
         android:layout_width="match_parent"
@@ -142,7 +162,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/updateSetting"
         android:layout_width="137dp"
         android:layout_height="50dp"
         android:text="Cài đặt"

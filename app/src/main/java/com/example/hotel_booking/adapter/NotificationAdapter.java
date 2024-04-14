@@ -2,6 +2,7 @@ package com.example.hotel_booking.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -55,9 +56,9 @@ public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapte
 
     private void onClickGoToNotificationDetail(Notification notification){
         Intent intent = new Intent(mcontext, DetailNotificationActivity.class); //khai báo để mở activity mới
-//        Bundle bundle = new Bundle();
-//        bundle.putSerializable("notification", notification);
-//        intent.putExtras(bundle);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("notification", notification);
+        intent.putExtras(bundle);
         mcontext.startActivity(intent);
     }
     @Override

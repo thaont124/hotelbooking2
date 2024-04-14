@@ -5,18 +5,36 @@ import org.threeten.bp.LocalDateTime;
 import java.io.Serializable;
 
 public class Notification implements Serializable {
+    private int idNotification;
     private int imgId;
     private String content;
 
     private int type;
 
-    private LocalDateTime date;
+    private String dateNotice;
 
-    public Notification(int imgId, String content, int type, LocalDateTime date) {
+    public Notification(int idNotification, int imgId, String content, int type, String date) {
+        this.idNotification = idNotification;
         this.imgId = imgId;
         this.content = content;
         this.type = type;
-        this.date = date;
+        this.dateNotice = date;
+    }
+
+    public int getIdNotification() {
+        return idNotification;
+    }
+
+    public void setIdNotification(int idNotification) {
+        this.idNotification = idNotification;
+    }
+
+    public String getDateNotice() {
+        return dateNotice;
+    }
+
+    public void setDateNotice(String dateNotice) {
+        this.dateNotice = dateNotice;
     }
 
     public int getImgId() {
@@ -44,10 +62,10 @@ public class Notification implements Serializable {
     }
 
     public String getDate() {
-        return String.format(String.valueOf(date));
+        return dateNotice;
     }
 
-    public void setDate(LocalDateTime date) {
-        this.date = date;
+    public void setDate(String date) {
+        this.dateNotice = date;
     }
 }

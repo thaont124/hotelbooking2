@@ -13,29 +13,23 @@ public class User {
 
     private String password;
 
-    private String fistName;
+    private String phoneNumber;
 
     private String cccd;
 
-    private String middelName;
-
-    private String lastName;
-
-    private String phoneNumber;
+    private String fullName;
 
     private String email;
 
     public User() {
     }
 
-    public User(Long idUser, String username, String password, String cccd, String fistName, String middelName, String lastName, String phoneNumber, String email) {
+    public User(Long idUser, String username, String password, String cccd, String fullName, String phoneNumber, String email) {
         this.idUser = idUser;
         this.username = username;
         this.password = password;
         this.cccd = cccd;
-        this.fistName = fistName;
-        this.middelName = middelName;
-        this.lastName = lastName;
+        this.fullName = fullName;
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
@@ -64,37 +58,6 @@ public class User {
         this.password = password;
     }
 
-    public String getFistName() {
-        return fistName;
-    }
-
-    public void setFistName(String fistName) {
-        this.fistName = fistName;
-    }
-
-    public String getMiddelName() {
-        return middelName;
-    }
-
-    public void setMiddelName(String middelName) {
-        this.middelName = middelName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
 
     public String getEmail() {
         return email;
@@ -102,6 +65,10 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getCccd() {
@@ -113,7 +80,15 @@ public class User {
     }
 
     public String getFullName(){
-        return getFistName() + " " + getMiddelName() + " " + getLastName();
+        return fullName;
 
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 }

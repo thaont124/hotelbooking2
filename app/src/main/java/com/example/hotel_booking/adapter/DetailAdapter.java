@@ -82,16 +82,15 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
                 roomInfoViewHolder.roomNumber.setText("Số phòng: " + roomInfo.getRoomNumber());
                 roomInfoViewHolder.roomType.setText("Loại phòng: " +roomInfo.getTypeRoom());
-                roomInfoViewHolder.hotel.setText("Tên khách sạn: " +roomInfo.getBranch().getHotel().getName());
+                roomInfoViewHolder.hotel.setText("Tên khách sạn: " +roomInfo.getHotelName());
                 roomInfoViewHolder.costPerDay.setText("Giá theo ngày: " +roomInfo.getPricePerDay().toString());
-                roomInfoViewHolder.costPerHour.setText("Giá theo ngày: " + roomInfo.getPricePerHour().toString());
                 break;
             case TYPE_BILL_INFO:
                 billInfo = (Bill) mItems.get(2);
                 BillInforViewHolder billInfoViewHolder = (BillInforViewHolder) holder;
 
                 billInfoViewHolder.billCode.setText("Mã hóa đơn: " + billInfo.getBillCode());
-                billInfoViewHolder.totalPrice.setText("Tổng giá" + billInfo.getTotalPrice().toString());
+                billInfoViewHolder.totalPrice.setText("Tổng giá: " + billInfo.getTotalPrice().toString());
                 billInfoViewHolder.vat.setText("Thuế VAT (10%): " + billInfo.getVAT().toString());
                 billInfoViewHolder.gross.setText("Thành tiền: " + billInfo.getGross().toString());
         }
@@ -146,7 +145,6 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         private TextView roomNumber;
         private TextView roomType;
         private TextView hotel;
-        private TextView costPerHour;
         private TextView costPerDay;
         public RoomInforViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -154,7 +152,6 @@ public class DetailAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
             roomNumber = itemView.findViewById(R.id.roomNumberTextView);
             roomType = itemView.findViewById(R.id.roomTypeTextView);
             hotel = itemView.findViewById(R.id.hotelTextView);
-            costPerHour = itemView.findViewById(R.id.costPerHourTextView);
             costPerDay = itemView.findViewById(R.id.costPerDayTextView);
 
         }

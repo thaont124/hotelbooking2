@@ -5,11 +5,7 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(foreignKeys = @ForeignKey(entity = TypeRoom.class,
-        parentColumns = "idTypeRoom",
-        childColumns = "idTypeRoom"))
 public class Room {
-    @PrimaryKey
     private Long idRoom;
 
     private String roomNumber;
@@ -18,12 +14,12 @@ public class Room {
 
     private Float pricePerDay;
 
-    @ColumnInfo(name = "idTypeRoom") // Tên cột trong bảng Room
-    private TypeRoom typeRoom;
+    private String typeRoom;
 
-    private Branch branch;
+    private String hotelName;
 
-    public Room(Long idRoom, String roomNumber, Float pricePerHour, Float pricePerDay, TypeRoom typeRoom) {
+    public Room(){}
+    public Room(Long idRoom, String roomNumber, Float pricePerHour, Float pricePerDay, String typeRoom) {
         this.idRoom = idRoom;
         this.roomNumber = roomNumber;
         this.pricePerHour = pricePerHour;
@@ -64,22 +60,18 @@ public class Room {
     }
 
     public String getTypeRoom() {
-        return typeRoom.getNameType();
+        return typeRoom;
     }
 
-    public void setIdTypeRoom(TypeRoom typeRoom) {
+    public void setTypeRoom(String typeRoom) {
         this.typeRoom = typeRoom;
     }
 
-    public void setTypeRoom(TypeRoom typeRoom) {
-        this.typeRoom = typeRoom;
+    public void setHotelName(String hotelName) {
+        this.hotelName = hotelName;
     }
 
-    public Branch getBranch() {
-        return branch;
-    }
-
-    public void setBranch(Branch branch) {
-        this.branch = branch;
+    public String getHotelName() {
+        return hotelName;
     }
 }
