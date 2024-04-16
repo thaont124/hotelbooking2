@@ -38,14 +38,14 @@ dependencies {
 
     implementation("com.jakewharton.threetenabp:threetenabp:1.2.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.11.0")
+
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     implementation("androidx.navigation:navigation-fragment:2.7.7")
     implementation("androidx.navigation:navigation-ui:2.7.7")
     implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("com.android.volley:volley:1.2.1")
+
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -53,8 +53,15 @@ dependencies {
 
     implementation ("com.squareup:javapoet:1.13.0")
     implementation ("androidx.room:room-runtime:2.4.0")
-    implementation ("com.google.code.gson:gson:2.8.8")
 
+    //tích hợp bản đồ
+    implementation("com.google.android.material:material:1.11.0")
+    //nhắc thông báo
+    implementation ("dev.gustavoavila:java-android-websocket-client:2.0.2")
+
+    //api
+    implementation("com.android.volley:volley:1.2.1")
+    implementation ("com.google.code.gson:gson:2.8.8")
     //map
     implementation("com.google.android.gms:play-services-maps:18.1.0")
 
